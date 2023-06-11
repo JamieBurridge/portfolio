@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Dividor from "../components/Dividor.astro";
+import TimeBasedGreeting from "../components/TimeBasedGreeting.astro";
+---
+
+<Layout title="Home">
+  <main>
+    <TimeBasedGreeting />
+    <h2>Welcome to my website! Enjoy your stay.</h2>
+  </main>
+
+  <Dividor />
+
+  <section>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam
+      voluptatibus nam odit blanditiis repellendus harum eos molestiae,
+      reiciendis temporibus quam nihil odio corrupti maiores unde quia earum eum
+      beatae exercitationem.
+    </p>
+
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam
+      voluptatibus nam odit blanditiis repellendus harum eos molestiae,
+      reiciendis temporibus quam nihil odio corrupti maiores unde quia earum eum
+      beatae exercitationem.
+    </p>
+  </section>
+</Layout>
+
+<style>
+  main > h2 {
+    font-size: var(--size-heading-2);
+    font-weight: 300;
+    padding-bottom: 3.5rem;
+  }
+
+  section {
+    font-size: 1.6rem;
+    line-height: 2;
+    padding-top: 3.5rem;
+  }
+</style>
