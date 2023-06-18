@@ -1,41 +1,122 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Dividor from "../components/Dividor.astro";
-import TimeBasedGreeting from "../components/TimeBasedGreeting.astro";
 ---
 
-<Layout title="Home">
-  <main>
-    <TimeBasedGreeting />
-    <h2>Welcome to my website! Enjoy your stay.</h2>
+<Layout>
+  <main id="main">
+    <div class="main-cover"></div>
+
+    <div class="navigation-container">
+      <div class="grid">
+        <div>
+          <img src="/assets/eyeanim.gif" alt="Eye winking gif" />
+        </div>
+        <div>
+          <ul>
+            <li>
+              <a href="/"> Home</a>
+            </li>
+            <li>
+              <a href="/about"> About</a>
+            </li>
+            <li>
+              <a href="/projects"> Projects</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <img src="/assets/slidbar.gif" alt="Green bar gif" id="green-bar" />
+    </div>
   </main>
-
-  <Dividor />
-
-  <section>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam
-      voluptatibus nam odit blanditiis repellendus harum eos molestiae,
-      reiciendis temporibus quam nihil odio corrupti maiores unde quia earum eum
-      beatae exercitationem.
-    </p>
-
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam
-      voluptatibus nam odit blanditiis repellendus harum eos molestiae,
-      reiciendis temporibus quam nihil odio corrupti maiores unde quia earum eum
-      beatae exercitationem.
-    </p>
-  </section>
 </Layout>
 
 <style>
-  main > h2 {
-    font-weight: 300;
-    padding-bottom: 3.5rem;
+  .main-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(100, 00, 70, 0.3);
   }
 
-  section {
-    padding-top: 3.5rem;
+  #main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-image: url("/assets/bg-cyberpunk.gif");
+    background-size: cover;
+  }
+
+  #main > .navigation-container {
+    padding: 0 1rem;
+    z-index: 2;
+  }
+
+  #main > .navigation-container > .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    min-width: 30vw;
+
+    background-color: #000000;
+    border: 5px solid #131212;
+    padding: 1rem;
+  }
+
+  #main > .navigation-container > .grid img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #main > .navigation-container > .grid div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #main > .navigation-container > .grid div:nth-child(2) > ul > li > a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    animation: nav-color-change 3s infinite ease-in-out;
+  }
+
+  #main > .navigation-container > .grid div:nth-child(2) > ul > li > a:hover {
+    color: white;
+    animation: none;
+  }
+
+  #main > .navigation-container > #green-bar {
+    width: 100%;
+    height: 5px;
+    filter: grayscale(100%);
+  }
+
+  @keyframes nav-color-change {
+    0% {
+      color: #32328b;
+    }
+    20% {
+      color: #4a4aaa;
+    }
+    40% {
+      color: #16167a;
+    }
+    60% {
+      color: #0b0b9e;
+    }
+    80% {
+      color: #1756a8;
+    }
+    100% {
+      color: #32328b;
+    }
   }
 </style>
