@@ -1,0 +1,52 @@
+---
+interface Props {
+  text: string | string[];
+}
+
+const { text } = Astro.props;
+---
+
+<div
+  class=`text-container ${Array.isArray(text) ? "text-container-multiple": "text-container-single"}`
+>
+  <!-- If array then print all items -->
+  {
+    Array.isArray(text) ? (
+      text.map((textItem) => <span>{textItem}</span>)
+    ) : (
+      <span>{text}</span>
+    )
+  }
+</div>
+
+<div class="dividors-container">
+  <hr />
+  <hr />
+</div>
+
+<style>
+  .text-container {
+    color: #000000;
+    font-size: 1.4rem;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-weight: 500;
+
+    display: flex;
+    padding: 0.8rem 1rem;
+  }
+
+  .text-container-multiple {
+    justify-content: space-between;
+  }
+
+  .text-container-single {
+    justify-content: center;
+  }
+
+  .dividors-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+</style>

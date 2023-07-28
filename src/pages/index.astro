@@ -1,0 +1,101 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Headline from "../components/Headline.astro";
+import PageHeading from "../components/PageHeading.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { projectsData } from "../data/projectsData";
+---
+
+<Layout subtitle="Home">
+  <main>
+    <PageHeading
+      text={"A portfolio for a full-stack developer to share his projects."}
+    />
+    <PageHeading text={["Issue 1885", "Algarve, Portugal, 2023", "Page 1"]} />
+
+    <header>
+      <Headline>Breaking! Developer has portfolio!</Headline>
+    </header>
+
+    <section id="projects-section">
+      <p>
+        The developer known as Jamie has shared his projects, the source code of
+        which can all be viewed on his <a
+          href="https://github.com/JamieBurridge"
+          target="_blank">GitHub</a
+        >.
+      </p>
+      <div class="projects-container">
+        {
+          projectsData?.map((project, index) => (
+            <ProjectCard
+              heading={project.heading}
+              description={project.description}
+              link={project.link}
+              languagesUsed={project.languages_used}
+            />
+          ))
+        }
+      </div>
+    </section>
+
+    <section id="open-source-section">
+      <p>A quote from Jamie:</p>
+      <p>
+        "I also contribute to open source projects whenever I can. These
+        contributions can also be viewed on my <a
+          href="https://github.com/JamieBurridge"
+          target="_blank">GitHub</a
+        >. You can also contact me via email at <a
+          href="mailto:xross_dev@proton.me">xross_dev@proton.me</a
+        >. "
+      </p>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  header {
+    text-align: center;
+    padding: 10rem 0;
+  }
+
+  #projects-section,
+  #open-source-section {
+    padding: 0 var(--spacing-small);
+  }
+
+  #projects-section a,
+  #open-source-section a {
+    color: #506aaf;
+    font-weight: 500;
+  }
+
+  /* Projects section */
+  #projects-section p {
+    padding-bottom: var(--spacing-medium);
+  }
+
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: var(--spacing-medium);
+  }
+
+  /* Open source section */
+  #open-source-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: var(--spacing-big);
+  }
+
+  #open-source-section > p:first-child {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  #open-source-section > p:nth-child(2) {
+    font-style: italic;
+  }
+</style>
