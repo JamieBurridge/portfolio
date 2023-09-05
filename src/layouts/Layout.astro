@@ -30,8 +30,9 @@ const { subtitle } = Astro.props;
   }
 
   :root {
-    --color-primary: #2b1d1d;
-    --color-secondary: #f7f0f0;
+    --color-primary: #e6f1e9;
+    --color-secondary: #201e1e;
+    --color-links: #3ddf3d;
 
     --spacing-big: 4rem;
     --spacing-medium: 2rem;
@@ -54,13 +55,13 @@ const { subtitle } = Astro.props;
     position: relative;
     max-width: 80rem;
     margin: auto;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); */
     min-height: 100vh;
     padding-bottom: var(--spacing-big);
   }
 
   a {
-    color: var(--color-primary);
+    color: var(--color-links);
     text-decoration: none;
   }
 
