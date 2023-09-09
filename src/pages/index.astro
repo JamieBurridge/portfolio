@@ -13,13 +13,11 @@ import Layout from "../layouts/Layout.astro";
 
     <section id="projects-section">
       <div id="projects-section-text">
-        <p>
-          Hello there, my name is Jamie and I am a full-stack developer. 
-        </p>
+        <p>Hello there, my name is Jamie and I am a full-stack developer.</p>
 
         <p>
-          This is where I share all of my projects, the source code of
-          which can all be viewed on his <a
+          This is where I share all of my projects, the source code of which can
+          all be viewed on my <a
             href="https://github.com/JamieBurridge"
             target="_blank">GitHub</a
           >.
@@ -39,30 +37,10 @@ import Layout from "../layouts/Layout.astro";
         }
       </div>
     </section>
-
-    <section id="open-source-section">
-      <p>
-        I also contribute to open source projects whenever I can. These
-        contributions can also be viewed on my <a
-          href="https://github.com/JamieBurridge"
-          target="_blank">GitHub</a
-        >. If you would like to get in touch with me, please message me on <a href="https://www.linkedin.com/in/jamie-burridge-7222ba285/">Linkedin</a>.
-      </p>
-    </section>
   </main>
 </Layout>
 
 <style>
-  header {
-    text-align: center;
-    padding: 10rem 0;
-  }
-
-  #projects-section,
-  #open-source-section {
-    padding: 0 var(--spacing-small);
-  }
-
   /* Projects section */
   #projects-section > #projects-section-text {
     padding-bottom: var(--spacing-big);
@@ -73,13 +51,4 @@ import Layout from "../layouts/Layout.astro";
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: var(--spacing-medium);
   }
-
-  /* Open source section */
-  #open-source-section {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding-top: var(--spacing-big);
-  }
-
 </style>
