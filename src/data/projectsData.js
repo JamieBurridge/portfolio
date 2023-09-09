@@ -2,6 +2,13 @@ import { languages } from "../helpers/languages";
 
 export const projectsData = [
   {
+    heading: "Hyperstack",
+    description:
+      "Hyperstack is a Cloud computing platform. I was part of a team of 2 that worked on the front-end of this platform using NextJS and TailwindCSS.",
+    link: "https://www.hyperstack.cloud/",
+    languages_used: [languages.nextjs, languages.css],
+  },
+  {
     heading: "4rums",
     description: "4rums is a forum site made with PHP, Bootstrap and MySQL",
     link: "https://github.com/JamieBurridge/4rums",
