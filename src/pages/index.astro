@@ -24,18 +24,24 @@ import Layout from "../layouts/Layout.astro";
         </p>
       </div>
 
-      <div class="projects-container">
-        {
-          projectsData?.map((project, index) => (
-            <ProjectCard
-              heading={project.heading}
-              description={project.description}
-              link={project.link}
-              languagesUsed={project.languages_used}
-            />
-          ))
-        }
-      </div>
+      {
+        projectsData?.map((projectsCategory) => (
+          <>
+            <h4>{projectsCategory?.sectionTitle}</h4>
+
+            <div class="projects-container">
+              {projectsCategory?.projects?.map((project) => (
+                <ProjectCard
+                  heading={project.heading}
+                  description={project.description}
+                  link={project.link}
+                  languagesUsed={project.languages_used}
+                />
+              ))}
+            </div>
+          </>
+        ))
+      }
     </section>
   </main>
 </Layout>
@@ -46,9 +52,16 @@ import Layout from "../layouts/Layout.astro";
     padding-bottom: var(--spacing-big);
   }
 
+  #projects-section > h4 {
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: var(--spacing-small);
+  }
+
   .projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: var(--spacing-medium);
+    padding-bottom: var(--spacing-big);
   }
 </style>
