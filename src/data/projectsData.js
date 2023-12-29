@@ -7,7 +7,7 @@ export const projectsData = [
       {
         heading: "Hyperstack",
         description:
-          "Hyperstack is a Cloud computing platform. I was part of a team of 2 that worked on the front-end of this platform using NextJS and TailwindCSS.",
+          "Hyperstack is a Cloud computing platform. I worked on the front-end of this platform using NextJS and TailwindCSS.",
         link: "https://www.hyperstack.cloud/",
         languages_used: [languages.nextjs, languages.css],
       },
