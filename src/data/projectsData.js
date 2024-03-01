@@ -29,13 +29,6 @@ export const projectsData = [
     sectionTitle: "Front-end mini projects",
     projects: [
       {
-        heading: "Rock, paper, scissors",
-        description:
-          "Rock, paper, scissors game made with Expo, a React framework for building web apps.",
-        link: "https://rock-paper-scissors-expo.vercel.app/",
-        languages_used: [languages.react, languages.html, languages.css],
-      },
-      {
         heading: "Factopix",
         description:
           "Factopix is a website that generates a random fact with a random picture.",
