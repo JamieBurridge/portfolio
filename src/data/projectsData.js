@@ -60,13 +60,6 @@ export const projectsData = [
     sectionTitle: "CLI Projects",
     projects: [
       {
-        heading: "Binit",
-        description:
-          "A file trashing tool for Linux users to safely trash unwanted files.",
-        link: "https://github.com/JamieBurridge/binit",
-        languages_used: [languages.python],
-      },
-      {
         heading: "Pycal",
         description: "Pycal is a simple, lightweight list-style calendar.",
         link: "https://github.com/JamieBurridge/pycal",
